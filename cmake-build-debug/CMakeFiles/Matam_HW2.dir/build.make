@@ -78,19 +78,64 @@ CMakeFiles/Matam_HW2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matam_HW2.dir/main.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\main.cpp -o CMakeFiles\Matam_HW2.dir\main.cpp.s
 
+CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj: CMakeFiles/Matam_HW2.dir/flags.make
+CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj: ../Mtmchkin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Matam_HW2.dir\Mtmchkin.cpp.obj -c C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Mtmchkin.cpp
+
+CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Mtmchkin.cpp > CMakeFiles\Matam_HW2.dir\Mtmchkin.cpp.i
+
+CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Mtmchkin.cpp -o CMakeFiles\Matam_HW2.dir\Mtmchkin.cpp.s
+
+CMakeFiles/Matam_HW2.dir/Player.cpp.obj: CMakeFiles/Matam_HW2.dir/flags.make
+CMakeFiles/Matam_HW2.dir/Player.cpp.obj: ../Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Matam_HW2.dir/Player.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Matam_HW2.dir\Player.cpp.obj -c C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Player.cpp
+
+CMakeFiles/Matam_HW2.dir/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matam_HW2.dir/Player.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Player.cpp > CMakeFiles\Matam_HW2.dir\Player.cpp.i
+
+CMakeFiles/Matam_HW2.dir/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matam_HW2.dir/Player.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Player.cpp -o CMakeFiles\Matam_HW2.dir\Player.cpp.s
+
+CMakeFiles/Matam_HW2.dir/Card.cpp.obj: CMakeFiles/Matam_HW2.dir/flags.make
+CMakeFiles/Matam_HW2.dir/Card.cpp.obj: ../Card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Matam_HW2.dir/Card.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Matam_HW2.dir\Card.cpp.obj -c C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Card.cpp
+
+CMakeFiles/Matam_HW2.dir/Card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matam_HW2.dir/Card.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Card.cpp > CMakeFiles\Matam_HW2.dir\Card.cpp.i
+
+CMakeFiles/Matam_HW2.dir/Card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matam_HW2.dir/Card.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\Card.cpp -o CMakeFiles\Matam_HW2.dir\Card.cpp.s
+
 # Object files for target Matam_HW2
 Matam_HW2_OBJECTS = \
-"CMakeFiles/Matam_HW2.dir/main.cpp.obj"
+"CMakeFiles/Matam_HW2.dir/main.cpp.obj" \
+"CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj" \
+"CMakeFiles/Matam_HW2.dir/Player.cpp.obj" \
+"CMakeFiles/Matam_HW2.dir/Card.cpp.obj"
 
 # External object files for target Matam_HW2
 Matam_HW2_EXTERNAL_OBJECTS =
 
 Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/main.cpp.obj
+Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj
+Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/Player.cpp.obj
+Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/Card.cpp.obj
 Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/build.make
 Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/linklibs.rsp
 Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/objects1.rsp
 Matam_HW2.exe: CMakeFiles/Matam_HW2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Matam_HW2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\PC\Dropbox\studies\Matam\HW2\Matam-HW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Matam_HW2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Matam_HW2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

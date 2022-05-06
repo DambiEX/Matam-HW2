@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.cpp" "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/cmake-build-debug/CMakeFiles/Matam_HW2.dir/Card.cpp.obj"
+  "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Mtmchkin.cpp" "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/cmake-build-debug/CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj"
+  "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.cpp" "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/cmake-build-debug/CMakeFiles/Matam_HW2.dir/Player.cpp.obj"
   "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/main.cpp" "C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/cmake-build-debug/CMakeFiles/Matam_HW2.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

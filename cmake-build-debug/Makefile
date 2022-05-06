@@ -128,6 +128,78 @@ Matam_HW2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/build
 .PHONY : Matam_HW2/fast
 
+Card.obj: Card.cpp.obj
+.PHONY : Card.obj
+
+# target to build an object file
+Card.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Card.cpp.obj
+.PHONY : Card.cpp.obj
+
+Card.i: Card.cpp.i
+.PHONY : Card.i
+
+# target to preprocess a source file
+Card.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Card.cpp.i
+.PHONY : Card.cpp.i
+
+Card.s: Card.cpp.s
+.PHONY : Card.s
+
+# target to generate assembly for a file
+Card.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Card.cpp.s
+.PHONY : Card.cpp.s
+
+Mtmchkin.obj: Mtmchkin.cpp.obj
+.PHONY : Mtmchkin.obj
+
+# target to build an object file
+Mtmchkin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj
+.PHONY : Mtmchkin.cpp.obj
+
+Mtmchkin.i: Mtmchkin.cpp.i
+.PHONY : Mtmchkin.i
+
+# target to preprocess a source file
+Mtmchkin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.i
+.PHONY : Mtmchkin.cpp.i
+
+Mtmchkin.s: Mtmchkin.cpp.s
+.PHONY : Mtmchkin.s
+
+# target to generate assembly for a file
+Mtmchkin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.s
+.PHONY : Mtmchkin.cpp.s
+
+Player.obj: Player.cpp.obj
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam_HW2.dir\build.make CMakeFiles/Matam_HW2.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Matam_HW2
+	@echo ... Card.obj
+	@echo ... Card.i
+	@echo ... Card.s
+	@echo ... Mtmchkin.obj
+	@echo ... Mtmchkin.i
+	@echo ... Mtmchkin.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

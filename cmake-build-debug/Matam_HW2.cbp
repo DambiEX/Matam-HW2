@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.cpp">
+			<Option target="Matam_HW2"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.h">
+			<Option target="Matam_HW2"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Mtmchkin.cpp">
+			<Option target="Matam_HW2"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Mtmchkin.h">
+			<Option target="Matam_HW2"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.cpp">
+			<Option target="Matam_HW2"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.h">
+			<Option target="Matam_HW2"/>
+		</Unit>
 		<Unit filename="C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/main.cpp">
 			<Option target="Matam_HW2"/>
 		</Unit>
