@@ -1,5 +1,3 @@
-//TODO: code conventions for class member names. camelcase?
-
 #ifndef MATAM_HW2_PLAYER_H
 #define MATAM_HW2_PLAYER_H
 
@@ -7,13 +5,8 @@
 #define LOWER_BOUND -1
 
 class Player {
-    //"private:" is automatic with classes
-
-    char* name;
-    int level;
-    int force, maxHP, HP, coins;
 public:
-    Player(char* Name, int MaxHP = 100, int Force = 5); //constructor //TODO: conventions for constructor parameters
+    Player(char* name, int maxHP = 100, int force = 5); //constructor
     Player(const Player&); //copy constructor
     ~Player(); // destructor
 
@@ -27,6 +20,12 @@ public:
     void addCoins(int amount);
     bool pay(int amount);
     int getAttackStrength() const;
+
+private:
+    char* m_name;
+    int m_level;
+    int m_force, m_maxHP, m_HP, m_coins;
+
 };
 
 
