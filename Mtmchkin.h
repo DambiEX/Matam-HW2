@@ -1,6 +1,4 @@
-//
-// Created by Daniel_Meents on 07/04/2022.
-//
+//TODO: make some parameters/functions const? what is the syntax for that?
 
 #ifndef EX2_GAME_H
 #define EX2_GAME_H
@@ -58,15 +56,17 @@ public:
      */
     GameStatus getGameStatus() const;
 
-    void loopGame();
-
 private:
     Player m_player;
-    int m_cards_num;
+    const int m_cards_num;
     const Card* m_cards;
     int m_cards_index;
+    Card m_current_card;
     GameStatus m_status;
 
+    void loopGame();
+
+    void increment_cards_index();
 };
 
 

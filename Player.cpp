@@ -1,5 +1,6 @@
 //TODO: figure out strings as arguments to functions.
 //TODO: edge cases on all functions: inputs 0, NULL, negative. etc.
+//TODO: go over asserts and replace some of them with checks and stuff.
 
 #include "Player.h"
 #include "utilities.h"
@@ -19,8 +20,7 @@ static int fill(int threshold, int attribute, int amount, int direction){ //TODO
     }
 }
 
-Player::Player(char* name, int maxHP, int force){
-    m_name = name;
+Player::Player(const char* name, int maxHP, int force) : m_name(name) {
     m_maxHP = maxHP;
     m_HP = m_maxHP;
     m_force = force;
@@ -79,6 +79,7 @@ void Player::addCoins(int amount) {
 }
 
 bool Player::pay(int amount) {
+    assert(amount > 0);
     if (m_coins < amount)
     {
         return false;

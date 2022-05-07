@@ -4,16 +4,21 @@
 
 #include "Mtmchkin.h"
 
-Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards) {
-    m_player = Player(playerName); //TODO: implement copy constructor
+
+Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards)
+                    : m_cards_num(numOfCards), m_player(playerName) {
+
     m_cards = cardsArray;
-    m_cards_num = numOfCards;
     m_status = GameStatus::MidGame;
     m_cards_index = 0;
 }
 
 void Mtmchkin::playNextCard() {
-
+    increment_cards_index();
+    m_current_card = m_cards[m_cards_index];
+    m_current_card.printInfo();
+    m_current_card.applyEncounter(m_player); // TODO: pass by reference? is this already happening?
+    m_player.printInfo();
 }
 
 bool Mtmchkin::isOver() {
@@ -36,6 +41,13 @@ void Mtmchkin::loopGame() {
     while(!isOver()){
         playNextCard();
     }
+}
 
+void Mtmchkin::increment_cards_index() {
+    m_cards_index++;
+    if (m_cards_index >= m_cards_num)
+    {
+        m_cards_index = 0;
+    }
 }
 

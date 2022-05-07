@@ -6,7 +6,7 @@
 
 class Player {
 public:
-    Player(char* name, int maxHP = 100, int force = 5); //constructor
+    Player(const char* name, int maxHP = 100, int force = 5); //constructor
     Player(const Player&); //copy constructor
     ~Player(); // destructor
 
@@ -22,7 +22,7 @@ public:
     int getAttackStrength() const;
 
 private:
-    char* m_name;
+    const char* m_name;
     int m_level;
     int m_force, m_maxHP, m_HP, m_coins;
 
