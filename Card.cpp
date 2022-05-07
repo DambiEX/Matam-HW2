@@ -5,7 +5,8 @@
 #include "Card.h"
 
 Card::Card(CardType type, const CardStats &stats) {
-
+    m_effect = type;
+    m_stats = stats; //TODO: need to unpack pointer? or is this ok because its a reference?
 }
 
 void Card::applyEncounter(Player &player) const {
