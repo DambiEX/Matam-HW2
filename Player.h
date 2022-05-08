@@ -8,11 +8,10 @@
 
 class Player {
     //"private:" is automatic with classes
-
+public:
     char* name;
     int level;
     int force, maxHP, HP, coins;
-public:
     Player(char* Name, int MaxHP = 100, int Force = 5); //constructor //TODO: conventions for constructor parameters
     Player(const Player&); //copy constructor
     ~Player(); // destructor

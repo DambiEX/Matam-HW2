@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Matam_HW2.dir/Card.cpp.obj"
+  "CMakeFiles/Matam_HW2.dir/Card.cpp.obj.d"
   "CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj"
+  "CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj.d"
   "CMakeFiles/Matam_HW2.dir/Player.cpp.obj"
+  "CMakeFiles/Matam_HW2.dir/Player.cpp.obj.d"
   "CMakeFiles/Matam_HW2.dir/main.cpp.obj"
+  "CMakeFiles/Matam_HW2.dir/main.cpp.obj.d"
   "Matam_HW2.exe"
   "Matam_HW2.exe.manifest"
   "Matam_HW2.pdb"
