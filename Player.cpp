@@ -7,7 +7,7 @@
 #include <cassert> //TODO: use "assert" instead? which library are we allowed to use?
 
 
-static int fill(int threshold, int attribute, int amount, int direction){ //TODO: better parameter names
+static int changeAmount(int threshold, int attribute, int amount, int direction){ //TODO: better parameter names
     assert(amount >= 0); //TODO: maybe handle edge cases instead of asserting?
     int change = amount*direction;
     if ((attribute + change)*direction > threshold)
@@ -52,16 +52,16 @@ int Player::getLevel() const {
 }
 
 void Player::buff(int amount) {
-    //TODO: handle force max size
+    //there's no max force size
     m_force++;
 }
 
 void Player::heal(int amount) {
-    m_HP = fill(m_maxHP, m_HP, amount, UPPER_BOUND);
+    m_HP = changeAmount(m_maxHP, m_HP, amount, UPPER_BOUND);
 }
 
 void Player::damage(int amount) {
-    m_HP = fill(0, m_HP, amount, LOWER_BOUND);
+    m_HP = changeAmount(0, m_HP, amount, LOWER_BOUND);
 }
 
 bool Player::isKnockedOut() const {
@@ -82,6 +82,7 @@ bool Player::pay(int amount) {
     assert(amount > 0);
     if (m_coins < amount)
     {
+        printNoCoins();
         return false;
     }
     else

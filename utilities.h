@@ -107,6 +107,8 @@ void printTreasureCardInfo(const CardStats& card);
  */
 void printPlayerInfo(const char* name, int level, int force, int hp, int coins);
 
+void printNoCoins();
+
 
 
 #endif //EX2_UTILITIES_H

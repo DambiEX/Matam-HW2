@@ -6,12 +6,12 @@ Card::Card(CardType type, const CardStats &stats) {
 }
 
 void battle(Player &player, int cardForce, int loot, int hpLoss) {
-    if (player.m_force >= cardForce) {
+    if (player.getAttackStrength() >= cardForce) {
         player.levelUP();
         player.addCoins(loot);
         printBattleResult(true);
         return;
-    } else if (player.m_force < cardForce) {
+    } else if (player.getAttackStrength() < cardForce) {
         player.damage(hpLoss);
         printBattleResult(false);
         return;
@@ -19,21 +19,23 @@ void battle(Player &player, int cardForce, int loot, int hpLoss) {
 }
 
 void heal(Player &player, int cost, int heal) {
-    if (player.m_coins >= cost) {
-        player.m_coins -= cost;
+    bool result= player.pay(cost);
+    if (result){
         player.heal(heal);
         return;
-    } else {
+    }
+    else{
         return;
     }
 }
 
 void buff(Player &player, int cost, int buff) {
-    if (player.m_coins >= cost) {
-        player.m_coins -= cost;
-        player.buff(buff);
+    bool result= player.pay(cost);
+    if (result){
+        player.heal(buff);
         return;
-    } else {
+    }
+    else{
         return;
     }
 }

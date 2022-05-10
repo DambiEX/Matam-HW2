@@ -19,6 +19,7 @@ void Mtmchkin::playNextCard() {
     m_current_card.printInfo();
     m_current_card.applyEncounter(m_player); // TODO: pass by reference? is this already happening?
     m_player.printInfo();
+    changeGameStatus(m_player);
 }
 
 bool Mtmchkin::isOver() {
@@ -30,6 +31,17 @@ bool Mtmchkin::isOver() {
     else
     {
         return false;
+    }
+}
+
+void Mtmchkin::changeGameStatus(Player &player){
+    if (player.getLevel()>=10){
+        m_status=GameStatus::Win;
+        return;
+    }
+    else if (player.getLevel()<=0){
+        m_status=GameStatus::Loss;
+        return;
     }
 }
 

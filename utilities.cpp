@@ -63,3 +63,7 @@ void printPlayerInfo(const char* name, const int level, const int force, const i
     cout << LINE_DIVIDER << endl;
 }
 
+void printNoCoins(){
+    cout << "Not enough coins" << endl;
+}
+

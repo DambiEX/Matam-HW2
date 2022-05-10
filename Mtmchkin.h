@@ -56,6 +56,8 @@ public:
      */
     GameStatus getGameStatus() const;
 
+    void changeGameStatus(Player &player);
+
 private:
     Player m_player;
     const int m_cards_num;

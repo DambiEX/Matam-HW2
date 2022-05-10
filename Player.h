@@ -30,6 +30,7 @@ public:
 
     int getAttackStrength() const;
 
+private:
     const char *m_name;
     int m_level;
     int m_force, m_maxHP, m_HP, m_coins;
