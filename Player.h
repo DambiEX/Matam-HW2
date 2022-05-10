@@ -6,23 +6,31 @@
 
 class Player {
 public:
-    Player(const char* name, int maxHP = 100, int force = 5); //constructor
-    Player(const Player&); //copy constructor
+    Player(const char *name, int maxHP = 100, int force = 5); //constructor
+    Player(const Player &); //copy constructor
     ~Player(); // destructor
 
     void printInfo() const;
+
     int getLevel() const;
+
     void levelUP();
+
     void buff(int amount);
+
     void heal(int amount);
+
     void damage(int amount);
+
     bool isKnockedOut() const;
+
     void addCoins(int amount);
+
     bool pay(int amount);
+
     int getAttackStrength() const;
 
-private:
-    const char* m_name;
+    const char *m_name;
     int m_level;
     int m_force, m_maxHP, m_HP, m_coins;
 
