@@ -18,7 +18,7 @@ public:
 
     void printInfo() const;
     int getLevel() const;
-    void levelUP();
+    void levelUp();
     void buff(int amount);
     void heal(int amount);
     void damage(int amount);

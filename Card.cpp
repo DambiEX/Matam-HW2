@@ -1,4 +1,5 @@
 #include "Card.h"
+#include "utilities.h"
 
 Card::Card(CardType type, const CardStats &stats) {
     m_effect = type;
@@ -7,7 +8,7 @@ Card::Card(CardType type, const CardStats &stats) {
 
 void battle(Player &player, int cardForce, int loot, int hpLoss){
     if (player.force>=cardForce){
-        player.levelUP();
+        player.levelUp();
         player.addCoins(loot);
         printBattleResult(true);
         return;

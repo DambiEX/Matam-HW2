@@ -36,7 +36,7 @@ void Player::printInfo() const {
     printPlayerInfo(name, level, force, HP, coins);
 }
 
-void Player::levelUP() {
+void Player::levelUp() {
     if (level >= 10)
     {
         return;
