@@ -67,6 +67,8 @@ private:
     void loopGame();
 
     void increment_cards_index();
+
+    void updateGameStatus();
 };
 
 

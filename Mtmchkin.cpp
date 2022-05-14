@@ -13,6 +13,17 @@ Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCard
     m_cards_index = 0;
 }
 
+void Mtmchkin::updateGameStatus(){
+    if (m_player.isKnockedOut())
+    {
+        m_status = GameStatus::Loss;
+    }
+    if (m_player.getLevel() == MAX_LEVEL)
+    {
+        m_status = GameStatus::Win;
+    }
+}
+
 void Mtmchkin::playNextCard() {
     increment_cards_index();
     m_current_card = m_cards[m_cards_index];
@@ -22,6 +33,7 @@ void Mtmchkin::playNextCard() {
 }
 
 bool Mtmchkin::isOver() {
+    updateGameStatus();
     GameStatus status = getGameStatus();
     if (status == GameStatus::Win || status == GameStatus::Loss)
     {
@@ -34,14 +46,6 @@ bool Mtmchkin::isOver() {
 }
 
 GameStatus Mtmchkin::getGameStatus() const {
-    if (m_player.isKnockedOut())
-    {
-        m_status = Loss;
-    }
-    if (m_player.getLevel() == MAX_LEVEL)
-    {
-        m_status = Win;
-    }
     return m_status;
 }
 
