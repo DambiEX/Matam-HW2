@@ -1,4 +1,3 @@
-//TODO: figure out strings as arguments to functions.
 //TODO: edge cases on all functions: inputs 0, NULL, negative. etc.
 //TODO: go over asserts and replace some of them with checks and stuff.
 
@@ -7,32 +6,22 @@
 #include <cassert> //TODO: use "assert" instead? which library are we allowed to use?
 
 
-static int fill(int threshold, int attribute, int amount, int direction){ //TODO: better parameter names
+static int
+fill(int threshold, int attribute, int amount, int negativity) {
     assert(amount >= 0); //TODO: maybe handle edge cases instead of asserting?
-    int change = amount*direction;
-    if ((attribute + change)*direction > threshold)
+    int change = amount * negativity;
+    if ((attribute + change) * negativity > threshold)
     {
         return threshold;
-    }
-    else
+    } else
     {
-        return attribute+change;
+        return attribute + change;
     }
 }
 
-Player::Player(const char* name, int maxHP, int force) : m_name(name) {
-    m_maxHP = maxHP;
-    m_HP = m_maxHP;
-    m_force = force;
-    m_level = 1;
-    m_coins = 0;
-}
-
-Player::Player(const Player&) { //TODO: implement
-
-}
-
-Player::~Player() = default; //TODO: implement. what does "default" mean? (Clion told me to do this.)
+Player::Player(const char *name, int maxHP, int force) : m_name(name), m_maxHP(maxHP),
+                                                         m_HP(m_maxHP),
+                                                         m_force(force), m_level(1), m_coins(0) {}
 
 void Player::printInfo() const {
     printPlayerInfo(m_name, m_level, m_force, m_HP, m_coins);
@@ -43,8 +32,7 @@ void Player::levelUp() {
     if (m_level >= 10)
     {
         return;
-    }
-    else
+    } else
     {
         m_level++;
     }
@@ -55,8 +43,7 @@ int Player::getLevel() const {
 }
 
 void Player::buff(int amount) {
-    //TODO: handle force max size
-    m_force++;
+    m_force += amount;
 }
 
 void Player::heal(int amount) {
@@ -68,17 +55,18 @@ void Player::damage(int amount) {
 }
 
 bool Player::isKnockedOut() const {
-    if (m_HP <= 0){
+    if (m_HP <= 0)
+    {
         return true;
-    }
-    else{
+    } else
+    {
         return false;
     }
 }
 
 void Player::addCoins(int amount) {
     assert(amount > 0);
-    m_coins+=amount;
+    m_coins += amount;
 }
 
 bool Player::pay(int amount) {
@@ -86,16 +74,15 @@ bool Player::pay(int amount) {
     if (m_coins < amount)
     {
         return false;
-    }
-    else
+    } else
     {
-        m_coins-=amount;
+        m_coins -= amount;
         return true;
     }
 }
 
 int Player::getAttackStrength() const {
-    return m_level+m_force;
+    return m_level + m_force;
 }
 
 

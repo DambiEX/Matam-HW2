@@ -1,5 +1,3 @@
-//TODO: make some parameters/functions const? what is the syntax for that?
-
 #ifndef EX2_GAME_H
 #define EX2_GAME_H
 #include "Card.h"
@@ -27,7 +25,8 @@ public:
      *      An instance of Mtmchkin
     */
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards);
-
+    Mtmchkin(const Mtmchkin&) = default;
+    ~Mtmchkin() = default;
 
     /*
      * Play the next Card - according to the instruction in the exercise document
@@ -37,7 +36,6 @@ public:
     */
     void playNextCard();
 
-
     /*
      *  Check if the game ended:
      *
@@ -45,8 +43,7 @@ public:
      *          True if the game ended
      *          False otherwise
      */
-    bool isOver();
-
+    bool isOver() const;
 
     /*
      *  Get the status of the game:
@@ -56,18 +53,24 @@ public:
      */
     GameStatus getGameStatus() const;
 
+
+
 private:
     Player m_player;
     const int m_cards_num;
-    const Card* m_cards;
-    int m_cards_index;
+    const Card* m_cards{};
+    int m_cards_index{};
     Card m_current_card;
     GameStatus m_status;
 
-    void loopGame();
-
+    /*
+     * Increments m_cards_index. If it reached the end of the deck, resets the index to 0.
+     */
     void increment_cards_index();
 
+    /*
+     * Checks if the Player is dead of at the maximum level, and updates the game status accordingly.
+     */
     void updateGameStatus();
 };
 

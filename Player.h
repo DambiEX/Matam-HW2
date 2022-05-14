@@ -6,12 +6,6 @@
 
 class Player {
 public:
-    char* name;
-    int level;
-    int force, maxHP, HP, coins;
-    Player(const char* name, int maxHP = 100, int force = 5); //constructor
-    Player(const Player&); //copy constructor
-    ~Player(); // destructor
 
     void printInfo() const;
     int getLevel() const;
@@ -24,11 +18,14 @@ public:
     bool pay(int amount);
     int getAttackStrength() const;
 
+    explicit Player(const char* name, int maxHP = 100, int force = 5);
+    Player(const Player&) = default;
+    ~Player() = default;
+
 private:
     const char* m_name{};
     int m_level{};
     int m_force{}, m_maxHP{}, m_HP{}, m_coins{};
-
 };
 
 

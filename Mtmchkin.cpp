@@ -13,6 +13,12 @@ Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCard
     m_cards_index = 0;
 }
 
+//Mtmchkin::Mtmchkin(const Mtmchkin& other) : m_cards_num(other.m_cards_num), m_player(other.m_player) {
+//
+//}
+
+
+
 void Mtmchkin::updateGameStatus(){
     if (m_player.isKnockedOut())
     {
@@ -28,12 +34,12 @@ void Mtmchkin::playNextCard() {
     increment_cards_index();
     m_current_card = m_cards[m_cards_index];
     m_current_card.printInfo();
-    m_current_card.applyEncounter(m_player); // TODO: pass by reference? is this already happening?
+    m_current_card.applyEncounter(m_player);
+    updateGameStatus();
     m_player.printInfo();
 }
 
-bool Mtmchkin::isOver() {
-    updateGameStatus();
+bool Mtmchkin::isOver() const{
     GameStatus status = getGameStatus();
     if (status == GameStatus::Win || status == GameStatus::Loss)
     {
@@ -49,12 +55,6 @@ GameStatus Mtmchkin::getGameStatus() const {
     return m_status;
 }
 
-void Mtmchkin::loopGame() {
-    while(!isOver()){
-        playNextCard();
-    }
-}
-
 void Mtmchkin::increment_cards_index() {
     m_cards_index++;
     if (m_cards_index >= m_cards_num)
@@ -62,4 +62,5 @@ void Mtmchkin::increment_cards_index() {
         m_cards_index = 0;
     }
 }
+
 
