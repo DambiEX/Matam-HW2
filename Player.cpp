@@ -28,9 +28,11 @@ Player::Player(const char* name, int maxHP, int force) : m_name(name) {
     m_coins = 0;
 }
 
-Player::Player(const Player &) {} //TODO: implement
+Player::Player(const Player&) { //TODO: implement
 
-Player::~Player() {} //TODO: implement
+}
+
+Player::~Player() = default; //TODO: implement. what does "default" mean? (Clion told me to do this.)
 
 void Player::printInfo() const {
     printPlayerInfo(m_name, m_level, m_force, m_HP, m_coins);

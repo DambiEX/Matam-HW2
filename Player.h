@@ -5,6 +5,7 @@
 #define LOWER_BOUND -1
 
 class Player {
+
 public:
     Player(const char* name, int maxHP = 100, int force = 5); //constructor
     Player(const Player&); //copy constructor
@@ -22,9 +23,9 @@ public:
     int getAttackStrength() const;
 
 private:
-    const char* m_name;
-    int m_level;
-    int m_force, m_maxHP, m_HP, m_coins;
+    const char* m_name{};
+    int m_level{};
+    int m_force{}, m_maxHP{}, m_HP{}, m_coins{};
 
 };
 
