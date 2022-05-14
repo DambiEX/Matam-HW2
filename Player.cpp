@@ -1,14 +1,11 @@
-//TODO: edge cases on all functions: inputs 0, NULL, negative. etc.
-//TODO: go over asserts and replace some of them with checks and stuff.
-
 #include "Player.h"
 #include "utilities.h"
-#include <cassert> //TODO: use "assert" instead? which library are we allowed to use?
 
-
-static int
-fill(int threshold, int attribute, int amount, int negativity) {
-    assert(amount >= 0); //TODO: maybe handle edge cases instead of asserting?
+static int fill(int threshold, int attribute, int amount, int negativity) {
+    if(amount <= 0)
+    {
+        return attribute;
+    }
     int change = amount * negativity;
     if ((attribute + change) * negativity > threshold)
     {
@@ -43,7 +40,10 @@ int Player::getLevel() const {
 }
 
 void Player::buff(int amount) {
-    m_force += amount;
+    if(amount>0)
+    {
+        m_force += amount;
+    }
 }
 
 void Player::heal(int amount) {
@@ -65,12 +65,15 @@ bool Player::isKnockedOut() const {
 }
 
 void Player::addCoins(int amount) {
-    assert(amount > 0);
-    m_coins += amount;
+    if(amount>0){
+        m_coins += amount;
+    }
 }
 
 bool Player::pay(int amount) {
-    assert(amount > 0);
+    if (amount <= 0){
+        return true;
+    }
     if (m_coins < amount)
     {
         return false;
