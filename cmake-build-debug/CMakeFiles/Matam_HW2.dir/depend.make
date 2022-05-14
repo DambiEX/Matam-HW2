@@ -7,7 +7,11 @@ CMakeFiles/Matam_HW2.dir/Card.cpp.obj: \
  ../Player.h \
  ../utilities.h
 CMakeFiles/Matam_HW2.dir/Mtmchkin.cpp.obj: \
- ../Mtmchkin.cpp
+ ../Card.h \
+ ../Mtmchkin.cpp \
+ ../Mtmchkin.h \
+ ../Player.h \
+ ../utilities.h
 CMakeFiles/Matam_HW2.dir/Player.cpp.obj: \
  ../Player.cpp \
  ../Player.h \

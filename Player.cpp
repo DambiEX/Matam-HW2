@@ -1,5 +1,6 @@
 //TODO: figure out strings as arguments to functions.
 //TODO: edge cases on all functions: inputs 0, NULL, negative. etc.
+//TODO: go over asserts and replace some of them with checks and stuff.
 
 #include "Player.h"
 #include "utilities.h"
@@ -19,53 +20,55 @@ static int fill(int threshold, int attribute, int amount, int direction){ //TODO
     }
 }
 
-Player::Player(char* Name, int MaxHP, int Force){
-    name = Name;
-    maxHP = MaxHP;
-    HP = maxHP;
-    force = Force;
-    level = 1;
-    coins = 0;
+Player::Player(const char* name, int maxHP, int force) : m_name(name) {
+    m_maxHP = maxHP;
+    m_HP = m_maxHP;
+    m_force = force;
+    m_level = 1;
+    m_coins = 0;
 }
 
-Player::Player(const Player &) {} //TODO: implement
+Player::Player(const Player&) { //TODO: implement
 
-Player::~Player() {} //TODO: implement
+}
+
+Player::~Player() = default; //TODO: implement. what does "default" mean? (Clion told me to do this.)
 
 void Player::printInfo() const {
-    printPlayerInfo(name, level, force, HP, coins);
+    printPlayerInfo(m_name, m_level, m_force, m_HP, m_coins);
 }
 
+
 void Player::levelUp() {
-    if (level >= 10)
+    if (m_level >= 10)
     {
         return;
     }
     else
     {
-        level++;
+        m_level++;
     }
 }
 
 int Player::getLevel() const {
-    return level;
+    return m_level;
 }
 
 void Player::buff(int amount) {
     //TODO: handle force max size
-    force++;
+    m_force++;
 }
 
 void Player::heal(int amount) {
-    HP = fill(maxHP, HP, amount, UPPER_BOUND);
+    m_HP = fill(m_maxHP, m_HP, amount, UPPER_BOUND);
 }
 
 void Player::damage(int amount) {
-    HP = fill(0, HP, amount, LOWER_BOUND);
+    m_HP = fill(0, m_HP, amount, LOWER_BOUND);
 }
 
 bool Player::isKnockedOut() const {
-    if (HP <= 0){
+    if (m_HP <= 0){
         return true;
     }
     else{
@@ -75,23 +78,24 @@ bool Player::isKnockedOut() const {
 
 void Player::addCoins(int amount) {
     assert(amount > 0);
-    coins+=amount;
+    m_coins+=amount;
 }
 
 bool Player::pay(int amount) {
-    if (coins < amount)
+    assert(amount > 0);
+    if (m_coins < amount)
     {
         return false;
     }
     else
     {
-        coins-=amount;
+        m_coins-=amount;
         return true;
     }
 }
 
 int Player::getAttackStrength() const {
-    return level+force;
+    return m_level+m_force;
 }
 
 
