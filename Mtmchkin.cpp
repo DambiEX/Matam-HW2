@@ -31,7 +31,7 @@ void Mtmchkin::updateGameStatus(){
 
 void Mtmchkin::playNextCard() {
     increment_cards_index();
-    Card current_card = m_cards[m_cards_index];
+    Card current_card(m_cards[m_cards_index]);
     current_card.printInfo();
     current_card.applyEncounter(m_player);
     updateGameStatus();
