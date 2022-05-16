@@ -1,30 +1,20 @@
-//
-// Created by PC on 6/5/2022.
-//
-
 #include "Mtmchkin.h"
-#define MAX_LEVEL 10
+
 
 Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards)
-                    : m_cards_num(numOfCards), m_player(playerName){
+        : m_cards_num(numOfCards), m_player(playerName) {
+    const int INDEX_AT_BEGINNING=-1;
     m_status = GameStatus::MidGame;
     m_cards = cardsArray;
-    m_cards_index = 0;
+    m_cards_index = INDEX_AT_BEGINNING;
 }
 
-//Mtmchkin::Mtmchkin(const Mtmchkin& other) : m_cards_num(other.m_cards_num), m_player(other.m_player) {
-//
-//}
-
-
-
-void Mtmchkin::updateGameStatus(){
-    if (m_player.isKnockedOut())
-    {
+void Mtmchkin::updateGameStatus() {
+    const int MAX_LEVEL = 10;
+    if (m_player.isKnockedOut()) {
         m_status = GameStatus::Loss;
     }
-    if (m_player.getLevel() == MAX_LEVEL)
-    {
+    if (m_player.getLevel() == MAX_LEVEL) {
         m_status = GameStatus::Win;
     }
 }
@@ -38,14 +28,10 @@ void Mtmchkin::playNextCard() {
     m_player.printInfo();
 }
 
-bool Mtmchkin::isOver() const{
-    GameStatus status = getGameStatus();
-    if (status == GameStatus::Win || status == GameStatus::Loss)
-    {
+bool Mtmchkin::isOver() const {
+    if (getGameStatus() != GameStatus::MidGame) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
@@ -56,10 +42,7 @@ GameStatus Mtmchkin::getGameStatus() const {
 
 void Mtmchkin::increment_cards_index() {
     m_cards_index++;
-    if (m_cards_index >= m_cards_num)
-    {
+    if (m_cards_index >= m_cards_num) {
         m_cards_index = 0;
     }
 }
-
-
