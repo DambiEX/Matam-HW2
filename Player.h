@@ -23,9 +23,8 @@ public:
     ~Player() = default;
 
 private:
-    const char* m_name{};
-    int m_level{};
-    int m_force{}, m_maxHP{}, m_HP{}, m_coins{};
+    const char* m_name;
+    int m_level, m_maxHP, m_HP, m_force, m_coins;
 };
 
 

@@ -56,12 +56,11 @@ public:
 
 
 private:
-    Player m_player;
     const int m_cards_num;
-    const Card* m_cards{};
-    int m_cards_index{};
-    Card m_current_card;
+    Player m_player;
     GameStatus m_status;
+    const Card* m_cards;
+    int m_cards_index;
 
     /*
      * Increments m_cards_index. If it reached the end of the deck, resets the index to 0.

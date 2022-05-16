@@ -16,14 +16,13 @@ static int fill(int threshold, int attribute, int amount, int negativity) {
     }
 }
 
-Player::Player(const char *name, int maxHP, int force) : m_name(name), m_maxHP(maxHP),
+Player::Player(const char *name, int maxHP, int force) : m_name(name), m_level(1), m_maxHP(maxHP),
                                                          m_HP(m_maxHP),
-                                                         m_force(force), m_level(1), m_coins(0) {}
+                                                         m_force(force), m_coins(0) {}
 
 void Player::printInfo() const {
     printPlayerInfo(m_name, m_level, m_force, m_HP, m_coins);
 }
-
 
 void Player::levelUp() {
     if (m_level >= 10)
