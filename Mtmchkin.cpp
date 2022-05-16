@@ -6,9 +6,8 @@
 #define MAX_LEVEL 10
 
 Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCards)
-                    : m_cards_num(numOfCards), m_player(playerName){
+                    : m_cards_num(numOfCards), m_player(playerName), m_cards(cardsArray){
     m_status = GameStatus::MidGame;
-    m_cards = cardsArray;
     m_cards_index = 0;
 }
 
@@ -31,9 +30,12 @@ void Mtmchkin::updateGameStatus(){
 
 void Mtmchkin::playNextCard() {
     increment_cards_index();
-    Card current_card(m_cards[m_cards_index]);
-    current_card.printInfo();
-    current_card.applyEncounter(m_player);
+    if (m_cards_num > 0)
+    {
+        Card current_card(m_cards[m_cards_index]);
+        current_card.printInfo();
+        current_card.applyEncounter(m_player);
+    }
     updateGameStatus();
     m_player.printInfo();
 }
