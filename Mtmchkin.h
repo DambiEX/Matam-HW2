@@ -26,7 +26,7 @@ public:
     */
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards = 0);
     Mtmchkin(const Mtmchkin&) = default;
-    ~Mtmchkin() = default;
+    ~Mtmchkin();
 
     /*
      * Play the next Card - according to the instruction in the exercise document
