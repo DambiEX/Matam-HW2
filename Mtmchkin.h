@@ -58,7 +58,7 @@ public:
 private:
     const int m_cards_num;
     Player m_player;
-    const Card* m_cards;
+    Card* m_cards;
     GameStatus m_status;
     int m_cards_index;
 

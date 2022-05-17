@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.cpp
-Card.h
-C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.h
-
 C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Card.h
 string
 -
@@ -29,12 +25,6 @@ Player.h
 C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.h
 iostream
 -
-
-C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.cpp
-Player.h
-C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.h
-utilities.h
-C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/utilities.h
 
 C:/Users/PC/Dropbox/studies/Matam/HW2/Matam-HW2/Player.h
 
