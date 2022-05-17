@@ -17,7 +17,7 @@ Mtmchkin::Mtmchkin(const char *playerName, const Card *cardsArray, int numOfCard
 }
 
 Mtmchkin::~Mtmchkin() {
-    delete m_cards;
+    delete[] m_cards;
 }
 
 void Mtmchkin::updateGameStatus(){
